@@ -47,7 +47,7 @@ def lore():
              '._____ ____ _____.'
              |     .'____'.     |
              '.__.'.'    '.'.__.'
-             '.__  TECHLOKER __.'
+             '.__ TECHLOCKER __.'
              |   '.'.____.'.'   |
              '.____'.____.'____.'GITHUB Amanza17
              '.________________.'\n""")
@@ -111,7 +111,7 @@ def lore_segunda_prueba():
 #   el lenguaje es COW
     print("Mucha suerte\n*Pista: introduzca todo el nombre en mayúsulas*\n*Pista: es un nombre en ingles*")
 
-def segundaa_prueba():
+def segunda_prueba():
     lore_segunda_prueba()
     sol = 0
     i = 0
@@ -140,6 +140,24 @@ def segundaa_prueba():
                     print("apagar pc")
                     #apagar_equipo()
     return True
+def prueba_techloker():
+    print("Para nosotros es muy importante que usted nos preste atención, por lo que le proponemos un reto, si recuerda usted el nombre"
+          "del grupo hacker, le devolvemos sus archivos, en caso contrario, tendrá que enfrentar una útima prueba, a vida o muerte")
+    name = input("Escriba el nombre del grupo: ")
+    if name.lower() == "techlocker":
+        print("Enhorabuena, ha conseguido desbloquear su equipo, espere unos instantes para que todo vuelva a su ser")
+        return True
+    return False
+
+
+def lore_ultima_prueba():
+    limpiar_terminal()
+    print("Parece ser que no se acuerda de que está usted hablando con TechLocker...")
+    print("Es curiosa la cantidad de lenguajes de programación que podemos llegar a utilizar los informáricos, hay moochos distintos")
+    print("La siguiente prueba consistirá en decir un lenguaje de programación de lo más extraño. Tiene 3 oprtundiades\n"
+          "Si alguno es el que nosotros utilizamos para hackear su sistema, perfecto, sino...")
+    #   el lenguaje es COW
+    print("Mucha suerte\n*Pista: introduzca todo el nombre en mayúsulas*\n*Pista: es un nombre en ingles*")
 
 
 def main():
@@ -149,6 +167,14 @@ def main():
     if (pass_first):
         limpiar_terminal()
         print("Conseguiste pasar la primera prueba, pero no va a ser así de facil todo")
+        pass_sec = segunda_prueba()
+        if (pass_sec):
+            limpiar_terminal()
+            print("Conseguiste pasar la primera prueba, pero no va a ser así de facil todo")
+            if prueba_techloker() == False:
+                print("Lo sentimos mucho, pero se equivocó en el nombre, prepárese")
+
+
 
 
 if __name__ == "__main__":
