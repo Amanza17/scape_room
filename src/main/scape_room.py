@@ -253,7 +253,7 @@ def create_loose():
 
     # Crea y abre el archivo en modo de escritura
     with open(file_path, "w") as file:
-        file.write("TUVISTE SUERTE, SOLO SE APAGÓ EL PC"
+        file.write("TUVISTE SUERTE, NO PERDISTE NINGUN ARCHIVO"
                    '''
                             .,,uod8B8bou,,.
                     ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
