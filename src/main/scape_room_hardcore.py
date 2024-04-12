@@ -20,9 +20,14 @@ def limpiar_terminal():
 import os
 
 def apagar_equipo():
-    print("Cuando salga del programa, busque en escritorio")
+    print("Cuando reinicie el ordenador, busque en escritorio")
     create_loose()
-    exit(1)
+    time.sleep(1)
+    if os.name == 'nt':
+        os.system('shutdown /s /t 1')
+    else:
+        os.system('shutdown -h now')
+
 
 def welcome():
     """mensaje de bienvenida y recomendaciones del juego"""
